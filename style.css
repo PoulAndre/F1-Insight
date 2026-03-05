@@ -1,0 +1,496 @@
+@keyframes shineBlack {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 200% center;
+  }
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    background-color: #111118;
+    overflow: hidden;
+}
+
+#nav {
+    display: block;
+    background-image: linear-gradient(to right, #111118, #1c1c28,#3e3378,#1c1c28, #111118);
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    color: #f0f0f0;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    text-align: center;
+    text-shadow:1px 3px 3px #4f4f4f;
+
+}
+
+
+.meny {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1rem;
+    padding-top: 0.5rem;
+    
+}
+.bakgrunn {
+   background-color: c;
+   border-radius: 5rem;
+   border: 0.15rem solid black;
+   margin: 1px;
+   box-shadow: 0px 1px 5px 0px #3e3378;
+   
+}
+.inner{
+    margin: 2px;
+    border-radius: 5rem;
+    background-color: #3e3378;    
+}
+button {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 4.5rem;
+    color: #a0a0b0;
+    padding: 15px;
+    margin: 4px;
+    background-color: transparent;
+    text-shadow:1px 2px 2px #4f4f4f;
+    transform: scale(1);
+    transition: background-color 0.2s ease, transform 0.3s ease; 
+}
+button:hover {
+    background-color: #1a1a2e;
+    transform: scale(1.05);
+
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+
+    border: 1px solid #f0f0f0;
+    color: #f0f0f0;
+    cursor:pointer;
+    text-shadow: none;
+    
+}
+
+
+#top{
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    padding: 5px;
+    height: auto;
+
+}
+#top ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+p {
+    color: black;
+}
+
+#område {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#bane{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: x-large;
+    padding: 0;
+    margin: 0;
+    color: #f0f0f0;
+    text-decoration:wavy;
+}
+
+#info {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style:normal;
+  font-size: 3.5vw;
+  margin: 0;
+  padding: 0;
+
+  
+
+  background: linear-gradient(
+    120deg,
+    #e8002d 20%,
+    #ededed 40%,
+    #ededed 50%,
+    #332775 60%,
+    #332775 80%,
+    #e8002d 100%
+  );
+
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shineBlack 5s ease-in-out infinite;
+}
+
+.dato {
+    display: flex;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+
+    font-size: medium;
+    margin: 0;
+    padding-top: 1rem;
+    color: #a0a0b0;
+}
+.dato-day {order: 3;}
+.dato-month {order: 2;}
+.dato-year {order: 1;}
+
+.dTid{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+
+    font-size: medium;
+    padding: 0;
+    margin: 0;
+    color: #a0a0b0;
+ 
+}
+
+#første {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 30%);
+    margin-top: 1rem;
+    min-height: 50vh;
+}
+
+.venstre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+.venstre ul {
+    list-style-type: none;
+}
+
+.Overskrift {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    color:#f0f0f0;
+
+}
+.Innhold1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+
+}
+.VærEmoji {
+    height: 10vw;
+    width: auto;
+    object-fit: cover;
+    
+
+}
+.værTekst {
+    font-size: 2rem;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    color: white;
+    text-transform: capitalize;
+}
+.værInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.værInfo p{
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 2rem;
+}
+
+
+#centerEn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+#Innhold2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#Liste {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.Box {
+    margin: 10px;
+    padding: 1rem;
+}
+.Plass{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #3e3378;
+    transform: scale(1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+.Plass:hover {
+    background-color: #a0a0b0;
+    transform: scale(1.05);
+} 
+
+.Plass p{
+    flex: 1;
+    margin: 0;
+    padding: 1rem;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    color: #f0f0f0;
+}
+.Plass:hover .pos, .Plass:hover .Driver, .Plass:hover .Team{
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+
+.pos{
+    text-align: left;
+}
+.Driver {
+    text-align: center;
+}
+.Team {
+    text-align: right;
+}
+
+
+#høyre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.Innhold3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;      
+}
+
+.bildet {
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/*HER ER CSS FOR RESULTS*/
+/*HER ER CSS FOR RESULTS*/
+/*HER ER CSS FOR RESULTS*/
+
+.sidetekst {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+.resultinfo {
+    display: flex;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: larger;
+    margin: 0;
+    padding-top: 1rem;
+    color: #a0a0b0;
+}
+
+
+#første2 {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 40%);
+    margin-top: 1rem;
+    height: 50vh; 
+}
+.resultCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    overflow: hidden; 
+    min-height: 0;
+}
+.resultInnhold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;        
+    min-height: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.Liste2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*HER ER CSS FOR TEAMS*/
+/*HER ER CSS FOR TEAMS*/
+/*HER ER CSS FOR TEAMS*/
+
+.teamsCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    height: 65vh;
+}
+
+.teams-ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    width: 97%;
+    height: 90%;
+    list-style-type: none;
+    
+}
+.teams-li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #3e3378;
+    border-radius: 10px;
+    background-color: #111118;
+    transform: scale(1);
+    transition: box-shadow 0.4s ease, transform 0.2s ease;
+}
+.teams-li:hover {
+    box-shadow: 0 1px 8px 2px #a0a0b0;
+    transform: scale(1.05);
+}
+
+
+.lag-text {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    font-size: x-large;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+}
+
+.lag-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.lag-info ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.lag-info p{
+    color: white;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: larger;
+    color: #f0f0f0;
+
+}
