@@ -1,11 +1,11 @@
 async function updateDriverInfo() {
     try {
-        const drivers = await fetch("http://localhost:3000/api/drivers");
+        const drivers = await fetch("https://f1-insight.onrender.com/api/drivers");
         const driverdata = await drivers.json();
 
         let championsdata = [];
         try{
-        const champions = await fetch("http://localhost:3000/api/driverChampionship");
+        const champions = await fetch("https://f1-insight.onrender.com/api/driverChampionship");
         championsdata = await champions.json();
         } catch (error) {
             console.log("Champ-data ikke tilgjengelig enda.");

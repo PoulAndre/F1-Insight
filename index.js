@@ -1,6 +1,6 @@
 async function updateUI() {
     try {
-        const response = await fetch('http://localhost:3000/api/next');
+        const response = await fetch('https://f1-insight.onrender.com/api/next');
         const data = await response.json();
 
         
