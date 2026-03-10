@@ -1,6 +1,8 @@
+const BASE_URL = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://f1-insight.onrender.com";
+
 async function updateUI() {
     try {
-        const response = await fetch('https://f1-insight.onrender.com/api/next');
+        const response = await fetch(`${BASE_URL}/api/next`);
         const data = await response.json();
 
         

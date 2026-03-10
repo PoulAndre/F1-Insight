@@ -1,11 +1,13 @@
+const BASE_URL = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://f1-insight.onrender.com";
+
 async function updateDriverInfo() {
     try {
-        const drivers = await fetch("https://f1-insight.onrender.com/api/drivers");
+        const drivers = await fetch(`${BASE_URL}/api/drivers`);
         const driverdata = await drivers.json();
 
         let championsdata = [];
         try{
-        const champions = await fetch("https://f1-insight.onrender.com/api/driverChampionship");
+        const champions = await fetch(`${BASE_URL}/api/driverChampionship`);
         championsdata = await champions.json();
         } catch (error) {
             console.log("Champ-data ikke tilgjengelig enda.");
