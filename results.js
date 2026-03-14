@@ -20,13 +20,6 @@ async function updateDriverInfo() {
                 const champion = championsdata.find(c => c.driver_number === driver.driver_number);
                     
                     let poeng;
-                   for(let i = 0; i < driverdata.length; i++){
-                    for(let j = 0; j < driverdata.length; j++) {
-                        if(i === j) {
-                            
-                        }
-                    }
-                   }
                         if(champion) {
                             poeng = champion.points_current;
                         } else {
