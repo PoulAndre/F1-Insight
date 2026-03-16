@@ -449,7 +449,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid #3e3378;
+    border: 2px solid #a0a0b0;
     border-radius: 10px;
     background-color: #111118;
     transform: scale(1);
@@ -509,8 +509,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #3E3378;
-    border: 2px solid #a0a0b0;
+    background-color: #1a1a2e;
+    border: 2px solid #3e3378;
     border-radius: 10px;
     height: 95%;
     width: 50%;
@@ -522,7 +522,7 @@ p {
     height: 100%;
     margin: 5px;
 }
-.venstreOmSiden ul h2{
+.venstreOmSiden ul h3{
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style:italic;
@@ -532,7 +532,7 @@ p {
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style:italic;
-    font-size: large;
+    font-size: medium;
     color: #a0a0b0;
     text-align: left;
     word-spacing: 7px;
@@ -542,33 +542,55 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #3E3378;
-    border: 2px solid #a0a0b0;
-    border-radius: 10px;
     height: 95%;
     width: 50%;
-}
-.høyreOmSiden h2 {
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-style:italic;
-    font-size: x-large;
-    color: #f0f0f0;
 }
 .boksene {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-
     list-style-type: none;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    gap: 34px;
+
+}
+.boksene li{
+    border: 2px solid #3e3378;
+    border-radius: 10px;
+    margin:0;
+    padding: 0;
+    background-color: #1a1a2e;
+
 }
 
 
 .Skrift{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.Skrift p1{
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style:italic;
     font-size: xx-large;
     color: #e8002d;
-    text-align: center;
+}
+
+.Skrift p2{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    font-size: large;
+    color: #a0a0b0;
+}
+.Skrift p3{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    font-size: x-large;
+    color: #f0f0f0;
 }

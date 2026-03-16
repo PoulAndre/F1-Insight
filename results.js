@@ -63,7 +63,3 @@ async function updateDriverInfo() {
 
 updateDriverInfo();
 
-
-
-
-
