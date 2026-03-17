@@ -93,6 +93,18 @@ app.get("/api/driverChampionship", async (req, res) => {
   }
 });
 
+app.get("/api/teamsChampionship", async (req, res) => {
+  try{
+    const response = await axios.get("https://api.openf1.org/v1/championship_teams?session_key=latest")
+    res.json(response.data);
+  } catch(error4) {
+    console.status(500).json ({
+      error: "kunne ikke hente teams data",
+      message: error4.message
+    })
+  }
+});
+
 
 
 app.listen(3000, () => {
