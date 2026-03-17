@@ -65,7 +65,7 @@ async function updateScoreInfo() {
 
 
 
-    const teamsdata = [];
+    let teamsdata = [];
     try {
         const teams = await fetch(`${BASE_URL}/api/teamsChampionship`);
         teamsdata = await teams.json();
@@ -76,12 +76,12 @@ async function updateScoreInfo() {
     teamsdata.sort((a, b) => {
             const teamOne = teamsdata.find(t => t.team_name === a.team_name);
             const teamTwo = teamsdata.find(t => t.team_name === b.team_name);
-            return teamOne.points_current - teamTwo.points_current;
+            return teamTwo.points_current - teamOne.points_current;
         });
 
     const teamsListe = document.getElementById("Teams");
         teamsdata.forEach((team, index) => {
-            const topTeam = teamsdata.find(t => team_name);
+            const topTeam = teamsdata.find(t => t.team_name === team.team_name);
             let teamPoeng;
             if(topTeam) {
                 teamPoeng = topTeam.points_current;
