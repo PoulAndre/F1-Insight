@@ -535,7 +535,7 @@ p {
     font-size: medium;
     color: #a0a0b0;
     text-align: left;
-    word-spacing: 7px;
+    word-spacing: 6px;
 }
 
 .høyreOmSiden {
@@ -564,6 +564,27 @@ p {
 
 }
 
+.verktøyBox ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    gap: 20px;
+    height: 15rem;
+    margin: 10px;
+    padding: 0;
+    
+}
+.verktøyBox ul li {
+    border: 2px solid #3e3378;
+    border-radius: 7px;
+}
+.verktøyBox h3 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    color: #a0a0b0;
+    text-align: center;
+}
 
 .Skrift{
     display: flex;
