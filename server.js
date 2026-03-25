@@ -29,7 +29,8 @@ app.get("/api/next", async (req, res) => {
           if(!nesteLøp || øktTid < nesteLøp.fullTid) {
             nesteLøp = {
               name: event.name, 
-              city: event.city, 
+              city: event.city,
+              country_f1: event.country_f1, 
               øktNavn: øktNavn,
               sessionsinfo1: øktData.date, 
               sessionsinfo2: øktData.time,
@@ -52,6 +53,7 @@ res.json({
     event: valgtEvent.name,
     session: nesteLøp,
     øktNavn: nesteLøp.øktNavn,
+    country_f1: valgtEvent.country_f1,
       weather: {
         temp: Math.round(w.main.temp),
         description: w.weather[0].description,
@@ -101,6 +103,18 @@ app.get("/api/teamsChampionship", async (req, res) => {
     console.status(500).json ({
       error: "kunne ikke hente teams data",
       message: error4.message
+    })
+  }
+});
+
+app.get("/api/meetings", async (req, res) => {
+  try{
+    const response = await axios.get("https://api.openf1.org/v1/meetings?session_key=latest")
+    res.json(response.data);
+  } catch(error5){
+    res.status(500).json ({
+      error:"kunne ikke hente meetings data",
+      message: error5.message
     })
   }
 });
