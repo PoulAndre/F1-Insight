@@ -68,34 +68,6 @@
         },
         {
             "round": 4,
-            "name": "Bahrain Grand Prix",
-            "city": "Manama",
-            "country": "BH",
-            "country_f1": "BRN",
-            "sessions": {
-                "fp1": {"date": "2026-04-10", "time": "13:30"},
-                "fp2": {"date": "2026-04-10", "time": "17:00"},
-                "fp3": {"date": "2026-04-11", "time": "14:30"},
-                "qualifying": {"date": "2026-04-11", "time": "18:00"},
-                "race": {"date": "2026-04-12", "time": "17:00"}
-            }
-        },
-        {
-            "round": 5,
-            "name": "Saudi Arabian Grand Prix",
-            "city": "Jeddah",
-            "country": "SA",
-            "country_f1": "KSA",
-            "sessions": {
-                "fp1": {"date": "2026-04-17", "time": "15:30"},
-                "fp2": {"date": "2026-04-17", "time": "19:00"},
-                "fp3": {"date": "2026-04-18", "time": "15:30"},
-                "qualifying": {"date": "2026-04-18", "time": "19:00"},
-                "race": {"date": "2026-04-19", "time": "19:00"}
-            }
-        },
-        {
-            "round": 6,
             "name": "Miami Grand Prix",
             "city": "Miami",
             "country": "US",
@@ -109,7 +81,7 @@
             }
         },
         {
-            "round": 7,
+            "round": 5,
             "name": "Canada Grand Prix",
             "city": "Montreal",
             "country": "CA",
@@ -123,7 +95,7 @@
             }
         },
         {
-            "round": 8,
+            "round": 6,
             "name": "Monaco Grand Prix",
             "city": "Monaco",
             "country": "MC",
@@ -137,7 +109,7 @@
             }
         },
         {
-            "round": 9,
+            "round": 7,
             "name": "Spanish Grand Prix (Barcelona)",
             "city": "Barcelona",
             "country": "ES",
@@ -151,7 +123,7 @@
             }
         },
         {
-            "round": 10,
+            "round": 8,
             "name": "Austrian Grand Prix",
             "city": "Spielberg",
             "country": "AT",
@@ -165,7 +137,7 @@
             }
         },
         {
-            "round": 11,
+            "round": 9,
             "name": "British Grand Prix",
             "city": "Silverstone",
             "country": "GB",
@@ -179,7 +151,7 @@
             }
         },
         {
-            "round": 12,
+            "round": 10,
             "name": "Belgian Grand Prix",
             "city": "Spa",
             "country": "BE",
@@ -193,7 +165,7 @@
             }
         },
         {
-            "round": 13,
+            "round": 11,
             "name": "Hungarian Grand Prix",
             "city": "Budapest",
             "country": "HU",
@@ -207,7 +179,7 @@
             }
         },
         {
-            "round": 14,
+            "round": 12,
             "name": "Dutch Grand Prix",
             "city": "Zandvoort",
             "country": "NL",
@@ -221,7 +193,7 @@
             }
         },
         {
-            "round": 15,
+            "round": 13,
             "name": "Italian Grand Prix",
             "city": "Monza",
             "country": "IT",
@@ -235,7 +207,7 @@
             }
         },
         {
-            "round": 16,
+            "round": 14,
             "name": "Spanish Grand Prix (Madrid)",
             "city": "Madrid",
             "country": "ES",
@@ -249,7 +221,7 @@
             }
         },
         {
-            "round": 17,
+            "round": 15,
             "name": "Azerbaijan Grand Prix",
             "city": "Baku",
             "country": "AZ",
@@ -263,7 +235,7 @@
             }
         },
         {
-            "round": 18,
+            "round": 16,
             "name": "Singapore Grand Prix",
             "city": "Singapore",
             "country": "SG",
@@ -277,7 +249,7 @@
             }
         },
         {
-            "round": 19,
+            "round": 17,
             "name": "United States Grand Prix",
             "city": "Austin",
             "country": "US",
@@ -291,7 +263,7 @@
             }
         },
         {
-            "round": 20,
+            "round": 18,
             "name": "Mexico City Grand Prix",
             "city": "Mexico City",
             "country": "MX",
@@ -305,7 +277,7 @@
             }
         },
         {
-            "round": 21,
+            "round": 19,
             "name": "São Paulo Grand Prix",
             "city": "São Paulo",
             "country": "BR",
@@ -319,7 +291,7 @@
             }
         },
         {
-            "round": 22,
+            "round": 20,
             "name": "Las Vegas Grand Prix",
             "city": "Las Vegas",
             "country": "US",
@@ -333,7 +305,7 @@
             }
         },
         {
-            "round": 23,
+            "round": 21,
             "name": "Qatar Grand Prix",
             "city": "Lusail",
             "country": "QA",
@@ -347,7 +319,7 @@
             }
         },
         {
-            "round": 24,
+            "round": 22,
             "name": "Abu Dhabi Grand Prix",
             "city": "Yas Marina",
             "country": "AE",
