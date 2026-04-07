@@ -7,10 +7,10 @@
             "city": "Manama",
             "country": "BH",
             "sessions": {
-                "fp1": {"date": "2026-02-11", "start": "16:27"},
-                "fp2": {"date": "2026-02-12", "start": "08:00"},
-                "qualifying": {"date": "2026-02-13", "start": "08:00"},
-                "race": {"date": "2026-02-13", "start": "08:00"}
+                "fp1": {"date": "2026-02-11", "time": "16:27"},
+                "fp2": {"date": "2026-02-12", "time": "08:00"},
+                "qualifying": {"date": "2026-02-13", "time": "08:00"},
+                "race": {"date": "2026-02-13", "time": "08:00"}
             }
         },
         {
@@ -69,7 +69,7 @@
         {
             "round": 4,
             "name": "Bahrain Grand Prix",
-            "city": "Sakhir",
+            "city": "Manama",
             "country": "BH",
             "country_f1": "BRN",
             "sessions": {

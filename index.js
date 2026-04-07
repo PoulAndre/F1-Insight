@@ -22,27 +22,6 @@ async function updateUI() {
         document.getElementById("grader").innerText = `${data.weather.temp}°`;
         document.getElementById("humidity").innerText = `${data.weather.wind} m/s`;
 
-      
-        const meets = await fetch(`${BASE_URL}/api/meetings`);
-        meetsdata = await meets.json();
-        
-
-
-            const bane = meetsdata.find(m => m.country_code === data.country_f1);
-            let nåVærendeBane;
-            if(bane){
-                nåVærendeBane = bane.circuit_image;
-            } else {
-                nåVærendeBane = "";
-            }
-
-            const img = document.createElement("img");
-            img.className = "Innhold3";
-            img.innerHTML = `
-                    <img class="bildet" scr="${nåVærendeBane}"/>
-            `;
-            liste.appendChild(li);
-
 
     } catch (error) {
         console.error("Klarte ikke hente data fra API-en din:", error);
@@ -51,5 +30,3 @@ async function updateUI() {
 }
 
 updateUI();
-
-

@@ -30,7 +30,7 @@ app.get("/api/next", async (req, res) => {
             nesteLøp = {
               name: event.name, 
               city: event.city,
-              country_f1: event.country_f1, 
+              country: event.country,
               øktNavn: øktNavn,
               sessionsinfo1: øktData.date, 
               sessionsinfo2: øktData.time,
@@ -46,6 +46,9 @@ app.get("/api/next", async (req, res) => {
 
 const city = encodeURIComponent(valgtEvent.city);
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},${valgtEvent.country}&units=metric&appid=${WEATHER_API_KEY}&lang=no`;
+
+console.log("Sender til OpenWeather:", weatherURL);
+
 const weatherResponse = await axios.get(weatherURL);
 const w = weatherResponse.data;
 
@@ -53,7 +56,6 @@ res.json({
     event: valgtEvent.name,
     session: nesteLøp,
     øktNavn: nesteLøp.øktNavn,
-    country_f1: valgtEvent.country_f1,
       weather: {
         temp: Math.round(w.main.temp),
         description: w.weather[0].description,
@@ -90,7 +92,7 @@ app.get("/api/driverChampionship", async (req, res) => {
   } catch (error3) { 
     console.status(500).json ({
       error: "kunne ikke hente champion data",
-      message: error3.messagae
+      message: error3.message
     })
   }
 });
@@ -106,7 +108,7 @@ app.get("/api/teamsChampionship", async (req, res) => {
     })
   }
 });
-
+/*
 app.get("/api/meetings", async (req, res) => {
   try{
     const response = await axios.get("https://api.openf1.org/v1/meetings?session_key=latest")
@@ -118,7 +120,7 @@ app.get("/api/meetings", async (req, res) => {
     })
   }
 });
-
+*/
 
 
 app.listen(3000, () => {
