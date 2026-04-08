@@ -301,10 +301,7 @@ p {
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
 }
-.Plass:hover {
-    background-color: #a0a0b0;
-    transform: scale(1.05);
-} 
+ 
 
 .Plass p{
     flex: 1;
@@ -468,10 +465,7 @@ p {
     transform: scale(1);
     transition: box-shadow 0.4s ease, transform 0.2s ease;
 }
-.teams-li:hover {
-    box-shadow: 0 1px 8px 2px #a0a0b0;
-    transform: scale(1.05);
-}
+
 
 
 .lag-text {
@@ -498,12 +492,10 @@ p {
     list-style-type: none;
 }
 
-.lag-info img{
+.lag-bilde{
     display: flex;
-    place-self: center;
-    padding: 2rem;
-
-    width: 40%;
+    justify-content: center;
+    padding: 1.5rem;
     height: auto;
     max-width: 600px;  
 }
@@ -575,7 +567,6 @@ p {
     margin:0;
     padding: 0;
     background-color: #1a1a2e;
-
 }
 
 .verktøyBox ul {
@@ -589,10 +580,19 @@ p {
     
 }
 .verktøyBox ul li {
-    border: 2px solid #3e3378;
-    border-radius: 7px;
+    border: 0px solid #3e3378;
+    
 }
 .verktøyBox h3 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    color: #f0f0f0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.verktøyBox p {
+    margin: 1rem;
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style:italic;
