@@ -27,9 +27,13 @@ h1 {
     font-style:normal;
     text-align: center;
     text-shadow:1px 3px 3px #4f4f4f;
-
 }
-
+h1 a {
+    cursor: pointer;
+}
+h1 a:hover {
+    color: #b3b3b3;
+}
 
 .meny {
     display: flex;
