@@ -1,16 +1,25 @@
 const BASE_URL = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://f1-insight.onrender.com";
-
+console.log("BASE_URL:", BASE_URL);
+console.log("hostname:", window.location.hostname);
 async function updateScoreInfo() {
     try {
         const drivers = await fetch(`${BASE_URL}/api/drivers`);
         const driverdata = await drivers.json();
 
         let championsdata = [];
+        
     try{
         const champions = await fetch(`${BASE_URL}/api/driverChampionship`);
         championsdata = await champions.json();
+            if(championsdata.length > 0) {
+                localStorage.setItem("championsdata", JSON.stringify(championsdata));
+            }
     } catch (error) {
-        console.log("Champ-data ikke tilgjengelig enda.");
+        console.log("Champ-data ikke tilgjengelig enda, bruker lagret data.");
+        const lagret = localStorage.getItem("championsdata");
+        if(lagret) {
+            championsdata = JSON.parse(lagret);
+        }
     }
 
 
@@ -20,7 +29,9 @@ async function updateScoreInfo() {
         driverdata.sort((a, b) => {
             const driverOne = championsdata.find(c => c.driver_number === a.driver_number);
             const driverTwo = championsdata.find(c => c.driver_number === b.driver_number);
-            return driverTwo.points_current - driverOne.points_current;
+            const poengA = driverOne ? driverOne.points_current : 0;
+            const poengB = driverTwo ? driverTwo.points_current : 0;
+            return poengB - poengA;
         });
 
         
@@ -32,7 +43,7 @@ async function updateScoreInfo() {
                 if(champion) {
                     driverPoeng = champion.points_current;
                 } else {
-                    driverPoeng = "NADA";
+                    driverPoeng = "nada";
                 }
 
                 const posisjon = index + 1;
@@ -69,15 +80,26 @@ async function updateScoreInfo() {
     try {
         const teams = await fetch(`${BASE_URL}/api/teamsChampionship`);
         teamsdata = await teams.json();
-    
+
+        if(teamsdata.length > 0) {
+            localStorage.setItem("teamsdata", JSON.stringify(teamsdata));
+        } else {
+            const lagret = localStorage.getItem("teamsdata");
+            if(lagret) teamsdata = JSON.parse(lagret);
+        }
+    } catch (error) {
+        console.log("Teams-data ikke tilgjengelig enda, bruker lagret data.");
+        const lagret = localStorage.getItem("teamsdata");
+        if(lagret) {
+            teamsdata = JSON.parse(lagret);
+    }
+}
     console.log(teamsdata[0]);
 
 
     teamsdata.sort((a, b) => {
-            const teamOne = teamsdata.find(t => t.team_name === a.team_name);
-            const teamTwo = teamsdata.find(t => t.team_name === b.team_name);
-            return teamTwo.points_current - teamOne.points_current;
-        });
+    return (b.points_current || 0) - (a.points_current || 0);
+});
 
     const teamsListe = document.getElementById("Teams");
         teamsdata.forEach((team, index) => {
@@ -112,9 +134,7 @@ async function updateScoreInfo() {
             `;
             teamsListe.appendChild(ti);
         });
-    } catch (error) {
-         console.error("Klarte ikke hente data fra API-en din:", error);
-    }
+    
 
 }
 

@@ -88,9 +88,9 @@ app.get("/api/drivers", async (req, res) => {
 app.get("/api/driverChampionship", async (req, res) => {
   try{
     const response = await axios.get("https://api.openf1.org/v1/championship_drivers?session_key=latest")
-    res.json(response.data);
+    console.json(response.data);
   } catch (error3) { 
-    console.status(500).json ({
+    res.status(500).json ({
       error: "kunne ikke hente champion data",
       message: error3.message
     })
