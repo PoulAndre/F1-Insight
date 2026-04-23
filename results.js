@@ -21,24 +21,22 @@ async function updateScoreInfo() {
             championsdata = JSON.parse(lagret);
         }
     }
-
+    
 
         console.log(driverdata[0]);
         console.log(championsdata[0]);
 
         driverdata.sort((a, b) => {
-            const driverOne = championsdata.find(c => c.driver_number === a.driver_number);
-            const driverTwo = championsdata.find(c => c.driver_number === b.driver_number);
-            const poengA = driverOne ? driverOne.points_current : 0;
-            const poengB = driverTwo ? driverTwo.points_current : 0;
-            return poengB - poengA;
+            const driverOne = driverdata.find(c => c.driver_number === a.driver_number);
+            const driverTwo = driverdata.find(c => c.driver_number === b.driver_number);
+            return driverTwo - driverOne;
         });
 
         
 
         const liste = document.getElementById("Drivers");
         driverdata.forEach((driver, index) => {
-                const champion = championsdata.find(c => c.driver_number === driver.driver_number);
+                const champion = driverdata.find(c => c.driver_number === driver.driver_number);
                 let driverPoeng;
                 if(champion) {
                     driverPoeng = champion.points_current;
@@ -73,6 +71,8 @@ async function updateScoreInfo() {
     } catch (error) {
          console.error("Klarte ikke hente data fra API-en din:", error);
     }
+
+
 
 
 
@@ -134,7 +134,6 @@ async function updateScoreInfo() {
             `;
             teamsListe.appendChild(ti);
         });
-    
 
 }
 
