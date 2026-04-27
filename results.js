@@ -2,41 +2,49 @@ const BASE_URL = window.location.hostname === "localhost" ? "http://localhost:30
 console.log("BASE_URL:", BASE_URL);
 console.log("hostname:", window.location.hostname);
 async function updateScoreInfo() {
+    
     try {
         const drivers = await fetch(`${BASE_URL}/api/drivers`);
         const driverdata = await drivers.json();
 
-        let championsdata = [];
         
+        let championsdata = [];
     try{
         const champions = await fetch(`${BASE_URL}/api/driverChampionship`);
         championsdata = await champions.json();
-            if(championsdata.length > 0) {
-                localStorage.setItem("championsdata", JSON.stringify(championsdata));
-            }
+
+        if(championsdata.length > 0) {
+            localStorage.setItem("championsdata", JSON.stringify(championsdata));
+        } else {
+            const lagret = localStorage.getItem("championsdata");
+            if(lagret) championsdata = JSON.parse(lagret);
+        }           
     } catch (error) {
         console.log("Champ-data ikke tilgjengelig enda, bruker lagret data.");
         const lagret = localStorage.getItem("championsdata");
-        if(lagret) {
-            championsdata = JSON.parse(lagret);
-        }
+        if(lagret) { championsdata = JSON.parse(lagret)}
     }
     
-
         console.log(driverdata[0]);
         console.log(championsdata[0]);
 
+        console.log("driverdata length:", driverdata.length);
+        console.log("championsdata length:", championsdata.length);
+
         driverdata.sort((a, b) => {
-            const driverOne = driverdata.find(c => c.driver_number === a.driver_number);
-            const driverTwo = driverdata.find(c => c.driver_number === b.driver_number);
-            return driverTwo - driverOne;
+            const driverOne = championsdata.find(c => c.driver_number === a.driver_number);
+            const driverTwo = championsdata.find(c => c.driver_number === b.driver_number);
+            const poengOne = driverOne ? driverOne.points_current : 0;
+            const poengTwo = driverTwo ? driverTwo.points_current : 0;
+            return poengTwo - poengOne;
         });
 
         
 
         const liste = document.getElementById("Drivers");
         driverdata.forEach((driver, index) => {
-                const champion = driverdata.find(c => c.driver_number === driver.driver_number);
+                const champion = championsdata.find(c => c.driver_number === driver.driver_number);
+                
                 let driverPoeng;
                 if(champion) {
                     driverPoeng = champion.points_current;
@@ -71,7 +79,7 @@ async function updateScoreInfo() {
     } catch (error) {
          console.error("Klarte ikke hente data fra API-en din:", error);
     }
-
+    
 
 
 
@@ -134,8 +142,9 @@ async function updateScoreInfo() {
             `;
             teamsListe.appendChild(ti);
         });
-
+    
 }
+
 
 updateScoreInfo();
 
