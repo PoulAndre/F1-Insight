@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-    <title>Results</title>
+    
+    <title>F1 INSIGHT</title>
     <style>@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');</style>
 </head>
 <body>
-
     <div id="nav">
         <h1><a onclick="location.href='index.html'">F1 INSIGHT</a></h1>
     </div>
@@ -29,27 +28,19 @@
 
         <div id="top">
             <ul id="område">
-                <li><p class="sidetekst">Results</p></li>
-                <li><p class="resultinfo">Overall results so far...</p></li>
+                <li><p class="sidetekst">Schedule</p></li>
+                <li><p class="resultinfo">All races - 2026 seasson</p></li>
            </ul>
         </div>
-    
-        <div id="første2">
-            <div class="resultCenter">
-                <h2 class="Overskrift">Drivers</h2>
-                <div class="resultInnhold">
-                    <ul class="Liste2" id="Drivers"></ul>
-                </div>
+
+        <div class="scheduleCenter">
+            <div class="schedule-ul">
+                <h1 class="Overskrift">Program</h1>
+                    <div class="løpsinfo" id="løpsinfo"></div>
             </div>
-            <div class="resultCenter">
-                <h2 class="Overskrift">Teams</h2>
-                <div class="resultInnhold">
-                    <ul class="Liste2" id="Teams"></ul>
-                </div>
-            </div>
-            
         </div>
-    <script src="results.js"></script>
     
+        
+    <script src="schedule.js"></script>
 </body>
 </html>

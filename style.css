@@ -301,8 +301,6 @@ p {
     border: 1px solid black;
     border-radius: 10px;
     background-color: #3e3378;
-    transform: scale(1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
 }
  
@@ -315,10 +313,6 @@ p {
     font-weight: 400;
     font-style:normal;
     color: #f0f0f0;
-}
-.Plass:hover .pos, .Plass:hover .Driver, .Plass:hover .Team{
-    color: #f0f0f0;
-    transition: color 0.3s ease;
 }
 
 
@@ -362,6 +356,84 @@ p {
     border-radius: 10px;
     width: 100%;
 }
+/*HER ER CSS FOR SCHEDULE*/
+/*HER ER CSS FOR SCHEDULE*/
+/*HER ER CSS FOR SCHEDULE*/
+
+.scheduleCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    border-color: #3e3378;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    height: 65vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+.schedule-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 100%;
+    list-style-type: none;
+   
+    
+}
+
+.løpsinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 0;
+    width: 90%;
+    height: 40%;
+}
+.løpsinfo p, h2 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    color: #f0f0f0;
+}
+.løpsinfoNoe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 0;
+    width: 90%;
+    height: 40%;
+
+    background-color: #3e3378;
+    border: 2px #a0a0b0 solid;
+    border-radius: 15px;
+}
+
+.løpsinfoListe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(0, 1fr);
+    width: 95%;
+    height: 40%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.infoListeDIV{
+    display: flex;
+    justify-content: space-around;
+}
+
+
 
 /*HER ER CSS FOR RESULTS*/
 /*HER ER CSS FOR RESULTS*/
